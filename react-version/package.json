@@ -8,9 +8,10 @@
   "dependencies": {
     "clsx": "^1.2.1",
     "gray-matter": "^4.0.3",
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "mysql2": "^3.4.5",
+    "next": "^13.4.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "serverless-mysql": "^1.5.5"
   },
   "devDependencies": {

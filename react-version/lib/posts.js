@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import executeQuery from './db';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -32,4 +33,13 @@ export function getSortedPostsData() {
       return -1;
     }
   });
+}
+
+export function getDatabasePostsData() {
+
+  const allPostsData = executeQuery('SELECT * FROM blogs',)
+  allPostsData
+  console.log(allPostsData)
+
+  return allPostsData;
 }
