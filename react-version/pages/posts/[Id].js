@@ -21,7 +21,7 @@ export default function Home() {
       }
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
-      // console.log(res);
+      console.log(res);
       setDataResponse(res.entries);
     }
     getPageData();
@@ -31,24 +31,11 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>This is a very concise introduction</p>
-      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {dataResponse.map((blog) => {
-            return(
-              <li className={utilStyles.listItem} key={blog.Id}>
-              {blog.title}
-              <br />
-              {blog.Id}
-              <br />
-              {blog.date}
-            </li>
-            )
-          })}
-        </ul>
+        <h2 className={utilStyles.headingLg}>{dataResponse[Id].title}</h2>
+        <p>
+          {dataResponse[Id].Content}
+        </p>
       </section>
     </Layout>
   );

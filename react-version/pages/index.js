@@ -29,11 +29,9 @@ export default function Home({ allPostsData }) {
           {dataResponse.map((blog) => {
             return(
               <li className={utilStyles.listItem} key={blog.Id}>
-              {blog.title}
+              <a href={`/posts/${blog.Id - 1}`}>{blog.title}</a>
               <br />
-              {blog.Id}
-              <br />
-              {blog.date}
+              {blog.date.slice(0,10)}
             </li>
             )
           })}

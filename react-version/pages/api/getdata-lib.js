@@ -1,11 +1,11 @@
 import { query } from "../../lib/db";
 
 export default async function handler(req, res) {
-  const id = req.body.Id;
+  // const id = req.body.Id;
   try {
 
-    const querySql = "SELECT * FROM blogs WHERE Id = ?";
-    const valuesParams = [id];
+    const querySql = "SELECT * FROM blogs";
+    const valuesParams = [];
     const data = await query({ query: querySql, values: valuesParams });
     
     res.status(200).json({ entries: data });
