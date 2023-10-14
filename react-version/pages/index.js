@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { useEffect, useState } from 'react';
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   const [dataResponse, setDataResponse] = useState([]);
   useEffect(() => {
     async function getPageData() {
